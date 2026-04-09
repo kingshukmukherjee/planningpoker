@@ -35,7 +35,7 @@ export const DHLLogo: React.FC<DHLLogoProps> = ({ className = '', size = 'md' })
           fontSize="28"
           letterSpacing="2"
         >
-          DHL
+          Kings
         </text>
       </svg>
       <span className="ml-3 text-white font-bold text-xl hidden sm:inline">
