@@ -43,6 +43,8 @@ export const RoomPage: React.FC = () => {
   const userName = sessionStorage.getItem('userName');
   const userIsHost = sessionStorage.getItem('isHost') === 'true';
 
+   console.log('isHost:', { isHost });
+
   // Redirect if no username
   useEffect(() => {
     if (!userName) {
