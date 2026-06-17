@@ -10,7 +10,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: CLIENT_URL
-        sync: false   # Set this manually in the Render dashboard after deploying the client
+        value: https://planningpoker-1-1mih.onrender.com
 
   # ── Frontend Static Site ─────────────────────────────────────────────────────
   - type: web
@@ -21,7 +21,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_SERVER_URL
-        sync: false   # Set this manually in the Render dashboard to the server's URL
+        value: https://planningpoker-be.onrender.com
     routes:
       - type: rewrite
         source: /*
