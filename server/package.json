@@ -1,5 +1,5 @@
 {
-  "name": "dhl-planning-poker-server",
+  "name": "planning-poker-server",
   "version": "1.0.0",
   "description": "Planning Poker Server with WebSocket support",
   "main": "index.js",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
     "express": "^4.18.2",
     "socket.io": "^4.7.2",
     "uuid": "^9.0.0"
