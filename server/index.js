@@ -1,13 +1,17 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import { v4 as uuidv4 } from 'uuid';
 
+// Load environment variables from .env file
+dotenv.config();
+
 const app = express();
 const server = createServer(app);
 
-const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5174';
 
 const io = new Server(server, {
   cors: {
@@ -190,7 +194,7 @@ io.on('connection', (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 server.listen(PORT, () => {
   console.log(`🚀 Planning Poker server running on port ${PORT}`);
