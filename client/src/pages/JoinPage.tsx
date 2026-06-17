@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { toast } from '@/hooks/use-toast';
 import { Users } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_SERVER_URL || (typeof window !== 'undefined' && window.location.hostname.includes('render.com') ? 'https://planningpoker-be.onrender.com' : 'http://localhost:3002');
 
 export const JoinPage: React.FC = () => {
   const navigate = useNavigate();
