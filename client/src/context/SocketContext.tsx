@@ -22,7 +22,7 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
-    const SERVER_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
+    const SERVER_URL = import.meta.env.VITE_SERVER_URL || (typeof window !== 'undefined' && window.location.hostname.includes('render.com') ? 'https://planningpoker-be.onrender.com' : 'http://localhost:3002');
     const socketInstance = io(SERVER_URL, {
       transports: ['websocket', 'polling'],
     });
