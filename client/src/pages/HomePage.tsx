@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { toast } from '@/hooks/use-toast';
 import { Users, Zap, Share2 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3002';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ export const HomePage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Kings <span className="text-dhl-red">Planning Poker</span>
+              Global <span className="text-dhl-red">Planning Poker</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Estimate your sprint stories collaboratively with your team.
